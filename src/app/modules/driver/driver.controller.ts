@@ -35,7 +35,7 @@ const applyAsDriver = catchAsync(async (req: Request, res: Response, next: NextF
 };
 
 
-  console.log(payload)
+  // console.log(payload)
 
   const result = await DriverService.applyAsDriver(user, payload);
 

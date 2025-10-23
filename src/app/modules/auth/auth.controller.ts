@@ -85,7 +85,6 @@ const logout = catchAsync(async (req: Request, res: Response, next: NextFunction
             httpOnly: true,
             secure: true,
             sameSite: "none",
-             
         }
     )
     res.clearCookie("refreshToken",
@@ -93,7 +92,6 @@ const logout = catchAsync(async (req: Request, res: Response, next: NextFunction
             httpOnly: true,
             secure: true,
             sameSite: "none",
-          
         }
     )
 
@@ -126,7 +124,6 @@ const setPassword = catchAsync(async (req: Request, res: Response, next: NextFun
 
     const decodedToken = req.user as JwtPayload
     const { password } = req.body
-
     await AuthServices.setPassword(decodedToken.userId, password)
 
 
